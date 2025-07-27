@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "server": "nodemon server.js",
-    "client": "npm run dev --prefix ./client",
-    "dev": "concurrently \"npm start\" \"npm run client\""
-  },
+"scripts": {
+  "start": "node index.js",
+  "server": "nodemon index.js",
+  "client": "npm run dev --prefix ./client",
+  "dev": "concurrently \"npm start\" \"npm run client\""
+},
   "keywords": [],
   "author": "",
   "license": "ISC",

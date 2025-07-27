@@ -1,0 +1,152 @@
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mobile-header {
+    display: none;
+    background-color: #1e1e2f;
+    color: white;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .hamburger {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .mobile-logo {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .layout {
+    flex: 1;
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #1e1e2f;
+    color: white;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sidebar .logo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    padding: 10px;
+    transition: background 0.3s;
+  }
+  
+  .menu-item a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .menu-item:hover {
+    background-color: #33344a;
+    border-radius: 8px;
+  }
+  
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+  }
+  
+  .header {
+    height: 60px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .body {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 50px;
+      height: 100%;
+      transform: translateX(-100%);
+      z-index: 1000;
+    }
+  
+    .sidebar.show {
+      transform: translateX(0);
+    }
+  
+    .mobile-header {
+      display: flex;
+    }
+  
+    .layout {
+      flex-direction: column;
+    }
+  
+    .content {
+      margin-top: 50px;
+    }
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .icon-container {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .icon-container:hover {
+    color: #007bff;
+  }
+  
+  .user-name {
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .user-name:hover {
+    color: #007bff;
+  }
+  
+  
